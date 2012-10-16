@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>Strict
+
+Import horizon.application
+
+Import horizon.faderbrightness
+Import horizon.scene
+Import horizon.zone
+Import horizon.flurry
+Import horizon.appirater
+
+Scene TempScene Extends Scene
+	Method OnEnter:Void()
+	End
+
+	Method OnLeave:Void()
+	End
+
+	Method OnUpdate:Void()
+	End
+
+	Method OnRender:Void()
+	End
+End
+
+Function Main:Int()
+	Local app:Application = Application.GetInstance()
+	app.SetSize(1024, 768)
+
+	app.Init()
+
+	app.AddFader(New FaderBrightness)
+
+	app.AddScene("temp", New TempScene())
+
+	Flurry.Init("__INSERT_FLURRY_CODE__HERE")
+	Appirater.Launched()
+
+	app.Run()
+
+	Return 0
+End</string>
+	<key>name</key>
+	<string>MainApplication</string>
+	<key>scope</key>
+	<string>source.monkey</string>
+	<key>tabTrigger</key>
+	<string>mainapp</string>
+</dict>
+</plist>

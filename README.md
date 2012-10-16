@@ -34,36 +34,20 @@ Unzip to:
 
 	~/Library/Application Support/Sublime Text/Packages/
 
-Next, you will need to add your monkey/bin folder to your Environment PATH.  
-This is currently a bit awkward but may hopefully become easier as Sublime Text allows stuff like this to be defined in the editor prefrences.
+Next, you will need to add your monkey/bin folder to your system wide path. This is currently a bit awkward but will hopefully become easier as Sublime Text continues to be improved.
 
-### Adding monkey to your PATH
-There are two paths in Mac OS X, the $PATH used by Terminal/shells and the Environment PATH as used by Windowed apps.  
-We'll add to both, just in case you need to use trans_macos from a shell as well as Sublime Text.
-
-#### Adding to the Terminal/shell $PATH
+### Path
+You will first need to confirm your monkey/bin location is in your shell path:
 
     echo "export PATH=\$PATH:/user/folder/monkey/bin" >> ~/.profile
 
-#### Adding to the Environment PATH
-
-Assuming you have done the step above, in Terminal:
+Next, add the shell path to the system-wide environment:
 
     defaults write ${HOME}/.MacOSX/environment PATH "${PATH}"
 
-Alternatively, you can manually edit `~/.MacOSX/environment.plist` or use the  [RCEnvironment](http://www.rubicode.com/Software/RCEnvironment/) preference pane.  
-Either way, the goal is to add your monkey/bin path to the PATH variable in your environment.
+Alternatively, you can manually edit `~/.MacOSX/environment.plist` or use the  [RCEnvironment](http://www.rubicode.com/Software/RCEnvironment/) preference pane. Either way, the goal is to add your monkey/bin path to the PATH variable in your environment.
 
-You will need to restart Mac OS X for the changes to take effect.
-
-### Debugging your PATH
-Bring up the Console using the View menu, then type:
-
-	import os
-	os.environ["PATH"]
-
-Your current Environment PATH as recognised by Sublime will be echoed to the console.  
-If you do not see your monkey/bin folder listed, you will need to repeat the steps listed in _Adding monkey to your PATH_.
+You will need to restart for the changes to take effect.
 
 ## Windows
 
@@ -84,10 +68,6 @@ You can talk about the bundle on the [official monkey forum](http://www.monkeyco
 monkey.sublime is made available under a [Creative Commons Attribution-Share Alike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0).
 
 ## Changelog
-
-2012-05-04  
-- Added DrawPoint (v50)  
-- Included current TextMate language grammar  
 
 2011-10-08  
 - Added FirstNode, LastNode, NextNode, PrevNode, Exp (v45c)  

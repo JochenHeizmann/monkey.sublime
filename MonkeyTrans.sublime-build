@@ -1,5 +1,5 @@
 {
-	"cmd": ["/Applications/Monkey/bin/trans_macos", "-target=stdcpp", "-run", "\"${project_path}/main.monkey\""],
+	"cmd": ["/Applications/Monkey/bin/transbuild.sh", "${project_path}"],
 	"working_dir": "${project_path:${folder:${file_path}}}",
 	"file_regex": "(...*?)<([0-9]*)>",
 	"selector": "source.monkey",

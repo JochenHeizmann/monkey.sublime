@@ -1,5 +1,5 @@
 {
-	"cmd": ["trans_macos", "-target=xna", "-run", "\"$file\""],
+	"cmd": ["/Applications/Monkey/bin/trans_macos", "-target=xna", "-run", "\"${project_path}/main.monkey\""],
 	"working_dir": "${project_path:${folder:${file_path}}}",
 	"file_regex": "(...*?)<([0-9]*)>",
 	"selector": "source.monkey",

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>Import horizon.scene
+
+Scene $1 Extends Scene
+	Method OnEnter:Void()
+	End
+
+	Method OnLeave:Void()
+	End
+
+	Method OnUpdate:Void()
+	End
+
+	Method OnRender:Void()
+	End
+End$2</string>
+	<key>name</key>
+	<string>Scene</string>
+	<key>scope</key>
+	<string>source.monkey</string>
+	<key>tabTrigger</key>
+	<string>scene</string>
+</dict>
+</plist>
